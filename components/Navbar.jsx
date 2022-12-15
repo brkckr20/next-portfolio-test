@@ -5,7 +5,7 @@ import { ImLinkedin } from 'react-icons/im';
 
 const Navbar = () => {
     return (
-        <div className='w-[450px] h-screen fixed flex items-center px-[50px] py-[70px]'>
+        <div className='w-[450px] hidden h-screen fixed md:flex items-center px-[50px] py-[70px]'>
             <div className='w-full'>
                 <div className='text-4xl tracking-widest uppercase font-semibold pb-28'><Link href="/">burak</Link></div>
                 <ul className=' pb-28'>
