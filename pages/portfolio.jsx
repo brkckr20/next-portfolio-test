@@ -65,7 +65,7 @@ export default function Portfolio() {
                 <div>
                     <FilterBar active={active} handleClick={handleCategoryClick} />
                 </div>
-                <div className='grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-8'>
+                <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-3 md:gap-8'>
                     <AnimatePresence>
                         {displayData.map(({ img, category }, i) => (
                             <motion.div
@@ -108,7 +108,7 @@ function FilterBar({ handleClick, active }) {
         <div className="gap-2" style={{ marginBottom: "1rem" }}>
             {items.map((item) => (
                 <button
-                    className={`mr-4 text-secondaryTextGray ${active === item.toLowerCase() && 'text-black'}`}
+                    className={`mr-4 text-secondaryTextGray ${active === item.toLowerCase() && 'text-black border-b border-black'}`}
                     onClick={() => handleClick(item.toLowerCase())}
                 >
                     {item}

@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import { MdOutlineKeyboardArrowRight } from 'react-icons/md';
 import UserInfoCard from '../components/UserInfoCard';
 import profilePic from '../public/assets/profile.jpg';
 
@@ -13,7 +14,7 @@ export default function Portfolio() {
             </Head>
             <div className='w-full bg-mainBg px-5 md:px-[90px] py-[40px]'>
                 <div>
-                    <h2 className='bg-secondaryBg inline-block px-4 py-2 uppercase mb-3 text-xs'>About</h2>
+                    <h2 className='bg-secondaryBg inline-flex px-4 py-2 uppercase mb-3 text-xs'>home <MdOutlineKeyboardArrowRight size={20} className="mx-6" /> about</h2>
                     <h2 className='text-[30px] font-bold'>About Me</h2>
                 </div>
                 <div className=''>

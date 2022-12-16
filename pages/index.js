@@ -1,4 +1,6 @@
 import Head from 'next/head';
+import { BsFacebook, BsInstagram, BsGithub } from 'react-icons/bs';
+import { ImLinkedin } from 'react-icons/im';
 
 export default function Home() {
   return (
@@ -11,11 +13,19 @@ export default function Home() {
       <div className='w-full h-screen bg-mainBg items-center flex justify-center px-5 md:px-44'>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4 w-full'>
           <div className='flex justify-center'>
-            <img className='w-[300px] h-[300px] rounded-full object-cover' src='https://brkckr20.github.io/static/media/profile2.3004e90282652fa748c1.png' />
+            <img className='w-[300px] h-[300px] rounded-full object-cover' src='https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80' />
           </div>
           <div className='md:col-span-2 flex flex-col justify-center'>
-            <h1 className='text-[55px] uppercase font-bold text-center'>Burak Çakır</h1>
+            <h1 className='text-[35px] md:text-[55px] uppercase font-bold text-center'>Burak Çakır</h1>
             <p className='mt-4 text-justify'>I am a web developer and I love my job, I am passionate about it. Since my graduation in 2020, I have been doing this profession with love and I am learning new things by updating myself with new information every day. I love learning and researching.</p>
+          </div>
+          <div className='md:hidden block'>
+            <ul className='w-full flex flex-wrap gap-x-5'>
+              <li className='hover:scale-110 duration-150 cursor-pointer'><a href="#"><BsFacebook size={24} fill="#4267B2" /></a></li>
+              <li className='hover:scale-110 duration-150 cursor-pointer'><a href="#"><ImLinkedin size={24} fill="#0072b1" /></a></li>
+              <li className='hover:scale-110 duration-150 cursor-pointer'><a href="#"><BsInstagram size={24} fill="#cd486b" /></a></li>
+              <li className='hover:scale-110 duration-150 cursor-pointer'><a href="#"><BsGithub size={24} fill="#333" /></a></li>
+            </ul>
           </div>
         </div>
       </div>

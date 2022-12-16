@@ -5,7 +5,7 @@ const Layout = ({ children }) => {
         <div className="float-left w-full">
             <Navbar />
             {
-                <main className="pl-0 md:pl-[450px]">{children}</main>
+                <main className="pl-0 lg:pl-[450px]">{children}</main>
             }
         </div>
     )
