@@ -14,7 +14,7 @@ const Navbar = () => {
     const dispatch = useDispatch();
 
     const handleChangeTheme = () => {
-        dispatch(changeTheme());
+        dispatch(changeTheme(theme === "dark" ? "light" : "dark"));
     }
 
     return (

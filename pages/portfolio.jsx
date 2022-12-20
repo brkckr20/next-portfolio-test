@@ -3,38 +3,34 @@ import Head from 'next/head';
 import { MdOutlineKeyboardArrowRight } from 'react-icons/md';
 import { AnimatePresence, motion } from "framer-motion";
 
+import clothTrackingApp from '../public/assets/cloth-tracking-app.png';
+import codetalks from '../public/assets/codetalks.png';
+import covid19 from '../public/assets/covid19.png';
+
 const data = {
     items: [
         {
-            img:
-                "https://images.unsplash.com/photo-1505935428862-770b6f24f629?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80",
+            img: clothTrackingApp,
             category: "web",
-            name: "Project 1"
+            name: "Cloth Tracking App"
         },
         {
-            img:
-                "https://images.unsplash.com/photo-1543353071-10c8ba85a904?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            img: codetalks,
             category: "mobil",
-            name: "Project 2"
+            name: "Code Talk App"
         },
         {
-            img:
-                "https://images.unsplash.com/photo-1495195129352-aeb325a55b65?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80",
-            category: "mobil",
-            name: "Project 4"
-        },
-        {
-            img:
-                "https://images.unsplash.com/photo-1495195129352-aeb325a55b65?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80",
+            img: covid19,
             category: "web",
-            name: "Project 7"
-        }
+            name: "Covid 19 Tracking App"
+        },
     ]
 };
 
 export default function Portfolio() {
     const [displayData, setDisplayData] = useState(data.items);
     const [active, setActive] = useState("all");
+
 
     const handleCategoryClick = (category) => {
         if (category === active) return;
@@ -87,7 +83,7 @@ export default function Portfolio() {
                                 >
                                     <motion.div className='absolute inset-0 bg-black/40 group-hover:bg-transparent duration-200'></motion.div>
                                     <motion.img
-                                        src={img}
+                                        src={img.src}
                                         className="rounded object-cover h-full"
                                         alt="nothing"
                                         width="100%"
