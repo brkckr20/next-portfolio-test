@@ -15,7 +15,7 @@ export default function Home() {
       <div className='w-full h-screen bg-mainBg dark:bg-darkSecondary items-center flex justify-center px-5 md:px-44'>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4 w-full'>
           <div className='flex justify-center shrink-0'>
-            <img className='w-[300px] h-[300px] rounded-full object-cover shrink-0' src='https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80' />
+            <img className='w-[300px] h-[300px] rounded-full object-cover shrink-0' src='https://burakcakir.netlify.app/static/media/profile2.3004e90282652fa748c1.png' />
           </div>
           <div className='md:col-span-2 flex flex-col justify-center'>
             <h1 className='text-[35px] md:text-[55px] uppercase font-bold text-center dark:text-white'>Burak Çakır</h1>
