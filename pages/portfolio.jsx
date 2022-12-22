@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Head from 'next/head';
+import Link from 'next/link'
 import { MdOutlineKeyboardArrowRight } from 'react-icons/md';
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -10,16 +11,19 @@ import covid19 from '../public/assets/covid19.png';
 const data = {
     items: [
         {
+            id: 1,
             img: clothTrackingApp,
             category: "web",
             name: "Cloth Tracking App"
         },
         {
+            id: 2,
             img: codetalks,
             category: "mobil",
             name: "Code Talk App"
         },
         {
+            id: 3,
             img: covid19,
             category: "web",
             name: "Covid 19 Tracking App"
@@ -67,7 +71,7 @@ export default function Portfolio() {
                 </div>
                 <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-3 md:gap-8'>
                     <AnimatePresence>
-                        {displayData.map(({ img, category, name }, i) => (
+                        {displayData.map(({ img, category, name, id }, i) => (
                             <motion.div
                                 style={{ overflow: "hidden" }}
                                 key={i}
@@ -77,19 +81,21 @@ export default function Portfolio() {
                                 exit={{ transform: "scale(0)" }}
                                 className="relative group"
                             >
-                                <motion.a
-                                    href='#/'
-                                    className=''
+
+                                <motion.div
+                                    className='w-full h-full'
                                 >
-                                    <motion.div className='absolute inset-0 bg-black/40 group-hover:bg-transparent duration-200'></motion.div>
-                                    <motion.img
-                                        src={img.src}
-                                        className="rounded object-cover h-full"
-                                        alt="nothing"
-                                        width="100%"
-                                    />
-                                    <motion.h1 className='absolute z-10 left-4 -bottom-8 group-hover:bottom-2 duration-200 text-white bg-black px-2 py-1'>{name}</motion.h1>
-                                </motion.a>
+                                    <Link href={`/portfolio/${id}`}>
+                                        <motion.div className='absolute inset-0 bg-black/40 group-hover:bg-transparent duration-200'></motion.div>
+                                        <motion.img
+                                            src={img.src}
+                                            className="rounded object-cover h-full"
+                                            alt="nothing"
+                                            width="100%"
+                                        />
+                                        <motion.h1 className='absolute z-10 left-4 -bottom-8 group-hover:bottom-2 duration-200 text-white bg-black px-2 py-1'>{name}</motion.h1>
+                                    </Link>
+                                </motion.div>
 
                             </motion.div>
                         ))}
