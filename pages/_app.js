@@ -3,6 +3,8 @@ import Layout from '../components/layout'
 import { Provider } from 'react-redux';
 import { store } from '../src/contexts/store';
 
+
+
 function MyApp({ Component, pageProps }) {
   return (
     <Provider store={store}>

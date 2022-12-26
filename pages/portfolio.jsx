@@ -1,12 +1,14 @@
 import { useState } from 'react';
 import Head from 'next/head';
-import Link from 'next/link'
 import { MdOutlineKeyboardArrowRight } from 'react-icons/md';
 import { AnimatePresence, motion } from "framer-motion";
+import Fancy from '../components/Fancy';
 
 import clothTrackingApp from '../public/assets/cloth-tracking-app.png';
 import codetalks from '../public/assets/codetalks.png';
 import covid19 from '../public/assets/covid19.png';
+
+
 
 const data = {
     items: [
@@ -71,33 +73,30 @@ export default function Portfolio() {
                 </div>
                 <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-3 md:gap-8'>
                     <AnimatePresence>
-                        {displayData.map(({ img, category, name, id }, i) => (
+                        {displayData.map(({ img, name, id }, i) => (
                             <motion.div
+                                data-fancybox="gallery"
+                                data-src={img.src}
                                 style={{ overflow: "hidden" }}
-                                key={i}
+                                key={id}
                                 layout
                                 initial={{ transform: "scale(0)" }}
                                 animate={{ transform: "scale(1)" }}
                                 exit={{ transform: "scale(0)" }}
-                                className="relative group"
+                                className="relative group cursor-pointer"
                             >
-
-                                <motion.div
-                                    className='w-full h-full'
-                                >
-                                    <Link href={`/portfolio/${id}`}>
-                                        <motion.div className='absolute inset-0 bg-black/40 group-hover:bg-transparent duration-200'></motion.div>
-                                        <motion.img
-                                            src={img.src}
-                                            className="rounded object-cover h-full"
-                                            alt="nothing"
-                                            width="100%"
-                                        />
-                                        <motion.h1 className='absolute z-10 left-4 -bottom-8 group-hover:bottom-2 duration-200 text-white bg-black px-2 py-1'>{name}</motion.h1>
-                                    </Link>
-                                </motion.div>
-
+                                <div className='w-full h-full'>
+                                    <motion.div className='absolute inset-0 bg-black/40 group-hover:bg-transparent duration-200'></motion.div>
+                                    <motion.img
+                                        src={img.src}
+                                        className="rounded object-cover h-full"
+                                        alt="nothing"
+                                        width="100%"
+                                    />
+                                    <motion.h1 className='absolute z-10 left-4 -bottom-8 group-hover:bottom-2 duration-200 text-white bg-black px-2 py-1'>{name}</motion.h1>
+                                </div>
                             </motion.div>
+
                         ))}
                     </AnimatePresence>
                 </div>
