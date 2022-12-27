@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { MdOutlineKeyboardArrowRight } from 'react-icons/md';
 import Divider from '../components/Divider';
 import UserInfoCard from '../components/UserInfoCard';
-import profilePic from '../public/assets/profile.jpg';
+import profilePic from '../public/assets/profile1.png';
 
 export default function Portfolio() {
     return (
@@ -18,8 +18,9 @@ export default function Portfolio() {
                     <h2 className='bg-secondaryBg dark:bg-darkPrimary dark:text-white inline-flex px-4 py-2 uppercase mb-3 text-xs'>home <MdOutlineKeyboardArrowRight size={20} className="mx-6" /> about</h2>
                     <h2 className='text-[30px] font-bold dark:text-white mb-7'>About Me</h2>
                 </div>
-                <div className=''>
-                    <Image src={profilePic} />
+                <div className='overflow-hidden relative'>
+                    <div className='absolute inset-0 bg-black opacity-70'>lorem</div>
+                    <Image className='w-full object-cover mx-auto max-h-[720px]' src={profilePic} />
                 </div>
                 <div>
                     <h1 className='text-2xl font-semibold pt-8 pb-4 dark:text-white'>Burak Çakır</h1>
